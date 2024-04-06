@@ -25,6 +25,7 @@ export default function Accueil() {
 
                     <C_Bureau/>
                     
+                    
                 </div>
                 
             </div>
