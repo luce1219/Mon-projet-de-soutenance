@@ -24,6 +24,9 @@ const C_Header = ({type}) => {
       salle: 0 // Ajout de salle dans l'objet options
    });
 
+   const navigate = useNavigate()
+
+
    const handleOption = (nom, operation) => {
       setOptions((prev) => {
          return {
@@ -32,6 +35,10 @@ const C_Header = ({type}) => {
          };
       });
    };
+
+   const  handleSearch =()=>{
+      navigate("/Apropos", {state:{}})
+   }
 
    return (
       <div className="header">
@@ -119,7 +126,7 @@ const C_Header = ({type}) => {
                      </div>}
                      </div>
                      <div className="headerSearchItem">
-                        <button className="headerBtn">Recherche</button> 
+                        <button className="headerBtn" onClick={handleSearch}>Recherche</button> 
                      </div>
                   </div>
                </>

@@ -6,6 +6,7 @@ import "../pages/Accueil.css"
 import SalleList from "../Components/SalleList";
 import ListeFuture from "../Components/ListeFuture";
 import C_Bureau from "../Components/C_Bureau";
+import C_Footer from "../Components/C_Footer";
 export default function Accueil() {
     return (
         <>
@@ -24,6 +25,7 @@ export default function Accueil() {
                     <ListeFuture/>
 
                     <C_Bureau/>
+                    <C_Footer/>
                     
                     
                 </div>

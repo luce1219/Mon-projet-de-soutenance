@@ -16,7 +16,7 @@ const ListeFuture = () => {
             </div>
             <div className="sallleItem">
                 <img src="/img5.jpg" alt="" className="salleImg"/>
-                <span className="salleOwendo">Lieu Carefour Sni</span>
+                <span className="salleOwend">Lieu Carefour Sni</span>
                 <span className="salleLibreville">Lieu centre-ville (renovation)</span>
                 <span className="salleAkanda">Rond point Avorbam</span>
                 <div className="salleGrande">
