@@ -7,8 +7,12 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 import React, { useState } from 'react';
 import { format } from "date-fns";
 import { fr } from 'date-fns/locale';
+import "../App"
+import { useNavigate } from 'react-router-dom';
+
 
 const C_Header = ({type}) => {
+   const [destination, setDestination] = useState("");
    const [openDate, setOpenDate] = useState(false);
    const [date, setDate] = useState([
       {
@@ -37,7 +41,7 @@ const C_Header = ({type}) => {
    };
 
    const  handleSearch =()=>{
-      navigate("/Apropos", {state:{}})
+      navigate("/Apropos", {state:{destination,date,options}})
    }
 
    return (
@@ -81,6 +85,7 @@ const C_Header = ({type}) => {
                            type="text" 
                            placeholder="Chercher des salles disponibles" 
                            className="headerSearchInput"
+                           onChange={e=>setDestination(e.target.value)}
                         />
                      </div>
                      <div className="headerSearchItem">
@@ -93,6 +98,7 @@ const C_Header = ({type}) => {
                         ranges={date}
                         locale={fr}
                         className="date"
+                        minDate={new Date()} 
                         />}
                      </div>
                      <div className="headerSearchItem">
