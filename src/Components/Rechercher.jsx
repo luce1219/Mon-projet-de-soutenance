@@ -32,7 +32,8 @@ const Rechercher = () => {
                 </div>
                 <div className="siDetailTests">
                     <span className="siPrix">15000fcfa/heure</span>
-                    <span className="siTaxOp">1Comprend les taxes et les frais</span>
+                    <span className="siTaxOp">Comprend les taxes et les frais</span>
+                    <button className="siCheckButton">Voir Disponible</button>
                 </div>
             </div>
         </div>

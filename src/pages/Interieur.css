@@ -1,0 +1,115 @@
+.interContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+    
+}
+
+.interWrapper{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.reserver{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border: none;
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.interTitle{
+    font-size: 24px;
+}
+
+.interAddress{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.interDistance{
+    color: goldenrod;
+    font-weight: 500;
+}
+
+.interPrix{
+    color: green;
+    font-weight: 500;
+}
+
+.interImgWrapper{
+    width: 33%;
+}
+
+.interImage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.interImg{
+    width: 100%;
+    object-fit: cover;
+}
+
+.interDetails{
+   display: flex; 
+   justify-content: space-between;
+   gap: 20px;
+   margin-top: 20px;
+}
+
+.interDetailsTexts{
+    flex: 3;
+}
+
+.interDesc{
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.interDetailsPrix{
+   flex: 1; 
+   background-color: blanchedalmond;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.interDetailsPrix>h1{
+    font-size: 18px;
+    color: gray;
+}
+
+.interDetailsPrix>span{
+    font-size: 14;
+}
+
+.interDetailsPrix>h2{
+    font-weight: 300;
+}
+
+.interDetailsPrix>button{
+    border: none;
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
