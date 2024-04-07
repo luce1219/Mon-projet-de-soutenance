@@ -8,6 +8,7 @@ import "../pages/Apropos.css";
 import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import Rechercher from "../Components/Rechercher";
 
 
 
@@ -37,7 +38,7 @@ export default function Apropos() {
                             </div>
                             <div className="lsItem">
                                 <label>date d'arrivée</label>
-                                <span>{`${format(date[0].startDate, "MM/dd/yyyy")} à ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
+                                <span onClick={()=>setOpenDate(!openDate)}>{`${format(date[0].startDate, "MM/dd/yyyy")} à ${format(date[0].endDate, "MM/dd/yyyy")}`}</span>
                                 {openDate && (
                                     <DateRange
                                         onChange={(item) => setDate([item.selection])}
@@ -47,8 +48,59 @@ export default function Apropos() {
                                 )}
 
                             </div>
+                            <div className="lsItem">
+                                <label>Options</label>
+                                <div className="lsOptions">
+                                    <div className="lsOptionItem">
+                                        <span className="lsOptionText">
+                                            Prix minimum <small>par droit</small>
+                                        </span>
+                                        <input type="number" className="lsOptionInput"/>
+
+                                    </div>
+                                    <div className="lsOptionItem">
+                                        <span className="lsOptionText">
+                                            Prix maximum <small>par droit</small>
+                                        </span>
+                                        <input type="number" className="lsOptionInput"/>
+
+                                    </div>
+                                    <div className="lsOptionItem">
+                                        <span className="lsOptionText">
+                                        Personnes 
+                                        </span>
+                                        <input type="number" min={0} className="lsOptionInput" placeholder={options.personnes}/>
+                                        
+                                    </div>
+                                    <div className="lsOptionItem">
+                                        <span className="lsOptionText">
+                                        adult
+                                        </span>
+                                        <input type="number" min={1} className="lsOptionInput" placeholder={options.adult}/>
+
+                                    </div>
+                                    <div className="lsOptionItem">
+                                        <span className="lsOptionText">
+                                            salle
+                                        </span>
+                                        <input type="number" min={1} className="lsOptionInput" placeholder={options.salle}/>
+
+                                    </div>
+                               </div>   
+                            </div>
+                            <button>Recherche</button> 
                         </div>
-                        <div className="listResult"></div>
+                        <div className="listResult">
+                            <Rechercher/>
+                            <Rechercher/>
+                            <Rechercher/>
+                            <Rechercher/>
+                            <Rechercher/>
+                            <Rechercher/>
+                            <Rechercher/>
+                            <Rechercher/>
+                            <Rechercher/>
+                        </div>
 
                     </div>
 
